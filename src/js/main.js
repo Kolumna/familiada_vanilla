@@ -31,21 +31,17 @@ const getOdpowiedzi = () => {
         }
     }
 
-    console.log(odpowiedzi[4].odp);
-
+    for (i in odpowiedzi) {
+        document.querySelector('#wyniki').innerHTML += `<tr id=w${i} style="visibility: hidden;"><td>${odpowiedzi[i].odp}</td><td>${odpowiedzi[i].pkt}pkt</td><td>${zycia}</td></tr>`;
+    }
 }
 
 const getWynik = () => {
     const wynik = document.querySelector(`#wynik`).value;
-    let check = false;
 
-    odpowiedzi.forEach(element => {
-        if (wynik === element) {
-            check = true;
-        }
-    });
-
-    for (i in odpowiedzi) {
-        document.querySelector('#wyniki').innerHTML += `<tr><td>${odpowiedzi[i].odp}</td><td>${odpowiedzi[i].pkt}pkt</td><td>${zycia}</td></tr>`;
+    for (let i in odpowiedzi) {
+        if (wynik === odpowiedzi[i].odp) {
+            document.querySelector(`#w${i}`).style = '';
+        } 
     }
 }
