@@ -3,7 +3,7 @@ const odpowiedzi = [];
 let zyciaL = 3;
 let zyciaP = 3;
 let punkty = 0;
-let strona =  Math.floor(Math.random() * Math.floor(2))
+let strona =  Math.floor(Math.random() * Math.floor(2));
 
 if (strona === 0) {
     document.querySelector('#tlo').style = 'background: #FF6C6C;';
