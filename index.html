@@ -34,7 +34,7 @@
   </div>
   <div id="gra" class="flex w-screen items-center justify-center flex-col" style="display: none;" >
     <div class="mt-8">
-      <div id="tlo" class="flex justify-center text-white w-[90vw] h-[85vh] bg-gray-300 transition-colors duration-500 rounded-lg border-4 p-4">
+      <div id="tlo" class="flex justify-center text-white w-[90vw] h-[85vh] bg-gray-500 transition-colors duration-500 rounded-lg border-4 p-4">
         <div id="zycie0" class="w-[10%] flex flex-col justify-center items-center"> 
         </div>
         <table id="wyniki" class="font-extrabold text-3xl w-[80%]">
@@ -54,8 +54,15 @@
       <p id="words"></p>
     </div>
     <p id="strona"></p>
-    <p class="text-xl font-bold text-red-500" id="results"></p>
   </div>
+  <div id="checkbox" class=" flex justify-center w-screen items-center flex-col" style=" display: none;">
+    <div class=" mt-8">
+      <span>Niebiescy <input class="border-4 mt-2 border-black" id="nieb" class="" placeholder="Wpisz odpowiedź" type='checkbox' /></span>
+      <span>Czerwoni <input class="border-4 mt-2 border-black" id="czer" class="" placeholder="Wpisz odpowiedź" type='checkbox' /></span>
+    </div>
+    <button class="bg-green-400 mt-2" onclick="getStart();">Wyślij</button>
+  </div>
+  <p class="text-xl font-bold text-red-500" id="results"></p>
   <script src="./src/js/main.js"></script>
 </body>
 
