@@ -8,45 +8,54 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="flex w-screen items-center justify-center flex-col">
+  <div id="form" class="flex w-screen items-center justify-center flex-col">
     <div>
-      <input class="border-4 mt-2 border-black" id="i0" placeholder="Ustaw odpowiedź" type='text' required />
-      <input class="border-4 w-16 mt-2 border-black" id="p0" placeholder="pkt" type='text' required />
+      <input class="border-4 mt-2 border-black" id="i0" placeholder="Ustaw odpowiedź" type='text' value="a" required />
+      <input class="border-4 w-16 mt-2 border-black" id="p0" placeholder="pkt" type='text' value="0" required />
     </div>
     <div>
-      <input class="border-4 mt-2 border-black" id="i1" placeholder="Ustaw odpowiedź" type='text' required />
-      <input class="border-4 w-16 mt-2 border-black" id="p1" placeholder="pkt" type='text' required />
+      <input class="border-4 mt-2 border-black" id="i1" placeholder="Ustaw odpowiedź" type='text' value="b" required />
+      <input class="border-4 w-16 mt-2 border-black" id="p1" placeholder="pkt" type='text' value="1" required />
     </div>
     <div>
-      <input class="border-4 mt-2 border-black" id="i2" placeholder="Ustaw odpowiedź" type='text' required />
-      <input class="border-4 w-16 mt-2 border-black" id="p2" placeholder="pkt" type='text' required />
+      <input class="border-4 mt-2 border-black" id="i2" placeholder="Ustaw odpowiedź" type='text' value="c" required />
+      <input class="border-4 w-16 mt-2 border-black" id="p2" placeholder="pkt" type='text' value="2" required />
     </div>
     <div>
-      <input class="border-4 mt-2 border-black" id="i3" placeholder="Ustaw odpowiedź" type='text' required />
-      <input class="border-4 w-16 mt-2 border-black" id="p3" placeholder="pkt" type='text' required />
+      <input class="border-4 mt-2 border-black" id="i3" placeholder="Ustaw odpowiedź" type='text' value="d" required />
+      <input class="border-4 w-16 mt-2 border-black" id="p3" placeholder="pkt" type='text' value="3" required />
     </div>
     <div>
-      <input class="border-4 mt-2 border-black" id="i4" placeholder="Ustaw odpowiedź" type='text' required />
-      <input class="border-4 w-16 mt-2 border-black" id="p4" placeholder="pkt" type='text' required />
+      <input class="border-4 mt-2 border-black" id="i4" placeholder="Ustaw odpowiedź" type='text' value="e" required />
+      <input class="border-4 w-16 mt-2 border-black" id="p4" placeholder="pkt" type='text' value="4" required />
     </div>
-    <button class="bg-green-400 mt-2" onclick="getOdpowiedzi();">Wyślij</button>
+    <button class="bg-green-400 mt-2" onclick="getOdpowiedzi();">Uruchom</button>
+
+  </div>
+  <div id="gra" class="flex w-screen items-center justify-center flex-col" style="display: none;" >
+    <div class="mt-8">
+      <div id="tlo" class="flex justify-center text-white w-[90vw] h-[85vh] bg-gray-300 transition-colors duration-500 rounded-lg border-4 p-4">
+        <div id="zycie0" class="w-[10%] flex flex-col justify-center items-center"> 
+        </div>
+        <table id="wyniki" class="font-extrabold text-3xl w-[80%]">
+          <tr class="font-bold text-2xl">
+            <td>nazwa:</td><td>punkty:</td>
+          </tr>
+        </table>
+        <div id="zycie1" class="w-[10%] flex flex-col justify-center items-center"> 
+        </div>
+      </div>
+    </div>
     <div class=" mt-8">
-        <input class="border-4 mt-2 border-black" id="wynik" class="" placeholder="Wpisz odpowiedź" type='text' />
+      <input class="border-4 mt-2 border-black" id="wynik" class="" placeholder="Wpisz odpowiedź" type='text' />
     </div>
     <button class="bg-green-400 mt-2" onclick="getWynik();">Wyślij</button>
-    <div class=" mt-8">
-      <table id="wyniki" class="w-[400px]">
-        <tr>
-          <th>nazwa</th><th>punkty</td><th>życia</th>
-        </tr>
-      </table>
-    </div>
     <div class="">
       <p id="words"></p>
     </div>
+    <p id="strona"></p>
+    <p class="text-xl font-bold text-red-500" id="results"></p>
   </div>
-  <p id="lifes"></p>
-  <p id="results"></p>
   <script src="./src/js/main.js"></script>
 </body>
 
