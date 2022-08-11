@@ -9,8 +9,8 @@
 </head>
 <body>
   <div id="form" class="flex w-screen items-center justify-center flex-col">
-    <h1 class=" text-gray-800 text-[7rem] font-bold ">Weseliada<span class="text-[2rem]">by Janiec</span></h1>
-    <input id="tytul" class="border-4 mt-2 border-black rounded-lg" type="text" placeholder="Tytuł" required>
+    <h1 class=" text-gray-800 text-[3rem] sm:text-[5rem] lg:text-[7rem] font-bold ">Weseliada<span class="text-[0.5rem] sm:text-[1rem] lg:text-[2rem]">by Janiec</span></h1>
+    <input id="tytul" class="border-4 mt-2 border-black rounded-lg" type="text" placeholder="Tytuł" required />
     <div>
       <input class="border-4 mt-2 border-black rounded-lg" id="i0" placeholder="Ustaw odpowiedź" type='text' value="a" required />
       <input class="border-4 w-16 mt-2 border-black rounded-lg" id="p0" placeholder="pkt" type='text' value="0" required />
@@ -33,17 +33,22 @@
     </div>
     <button class="bg-green-400 mt-8 p-4 rounded-lg border-4 font-bold hover:bg-green-300" onclick="getOdpowiedzi();">Uruchom</button>
   </div>
-  <div id="gra" class="flex w-screen items-center justify-center flex-col" style="display: none;" >
+  <div id="gra" class="flex w-full items-center justify-center flex-col" style="display: none;" >
     <div class="mt-8">
       <div id="tlo" class="flex justify-center text-white w-[90vw] h-[85vh] bg-gray-500 transition-colors duration-500 rounded-lg border-4 p-4">
         <div id="zycie0" class="w-[10%] flex flex-col justify-center items-center"> 
         </div>
-        <table id="wyniki" class="font-extrabold text-3xl w-[80%]">
+        <div class=" w-full h-full flex justify-between flex-col items-center">
           <h1 class="mt-4 text-3xl text-white text-bold" id="gra_tytul" style="display: none;"></h1>
-          <tr class="font-bold text-2xl">
-            <td>nazwa:</td><td>punkty:</td>
-          </tr>
-        </table>
+          <div id="wyniki" class="flex flex-col justify-evenly items-start font-extrabold text-3xl w-full">
+            <div class="flex justify-between font-bold text-2xl w-full mb-8">
+              <h1>NAZWA</h1><h1>PUNKTY</h1>
+            </div>
+          </div>
+          <div class=" text-3xl font-bold">
+            <h1 id="punkty">PUNKTY: 0</h1>
+          </div>
+        </div>
         <div id="zycie1" class="w-[10%] flex flex-col justify-center items-center"> 
         </div>
       </div>
@@ -61,7 +66,6 @@
     <button class="bg-green-400 mt-2 p-4 rounded-lg border-4 font-bold hover:bg-green-300" onclick="getStart();">Wyślij</button>
   </div>
   <p class="text-xl font-bold text-red-500" id="results"></p>
-  <p id="punkty"></p>
   <script src="./src/js/main.js"></script>
 </body>
 

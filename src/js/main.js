@@ -68,7 +68,7 @@ const getOdpowiedzi = () => {
     }
 
     for (i in odpowiedzi) {
-        document.querySelector('#wyniki').innerHTML += `<tr id=w${i} style="visibility: hidden;"><td>${parseInt(i)+1}. ${odpowiedzi[i].odp}</td><td>${odpowiedzi[i].pkt}pkt</td></tr>`;
+        document.querySelector('#wyniki').innerHTML += `<div id=w${i} style="visibility: hidden;" class="flex justify-between items-center w-full text-[4rem] mb-12"><h1>${parseInt(i)+1}. ${odpowiedzi[i].odp}</h1><h1>${odpowiedzi[i].pkt}pkt</h1></div>`;
     }
 }
 
@@ -79,7 +79,7 @@ const getWynik = () => {
     if (zyciaL || zyciaP > 0) {
         for (let i in odpowiedzi) {
             if (wynik.toUpperCase() === odpowiedzi[i].odp) {
-                document.querySelector(`#w${i}`).style = '';
+                document.querySelector(`#w${i}`).style.visibility = '';
                 punkty += odpowiedzi[i].pkt;
                 console.log(`punkty ${punkty}`)
                 check = true;
@@ -148,6 +148,6 @@ const getWynik = () => {
         }
         document.querySelector('#wynik').value = null;
 
-        document.querySelector('#punkty').innerHTML = parseInt(punkty);;
+        document.querySelector('#punkty').innerHTML = `PUNKTY: ${parseInt(punkty)}`;
     }
 }   

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components  {
+    .odp {
+      @apply flex justify-between items-center w-full text-[4rem] mb-12;
+    }
+  }

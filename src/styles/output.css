@@ -480,16 +480,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .flex {
   display: flex;
 }
 
-.table {
-  display: table;
-}
-
 .h-\[85vh\] {
   height: 85vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-screen {
@@ -508,8 +512,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10%;
 }
 
-.w-\[80\%\] {
-  width: 80%;
+.w-full {
+  width: 100%;
 }
 
 .flex-col {
@@ -524,16 +528,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-center {
   justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .rounded-lg {
@@ -559,13 +563,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
 .p-4 {
   padding: 1rem;
+}
+
+.text-\[7rem\] {
+  font-size: 7rem;
+}
+
+.text-\[2rem\] {
+  font-size: 2rem;
 }
 
 .text-3xl {
@@ -583,16 +590,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-\[7rem\] {
-  font-size: 7rem;
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
-.text-\[4rem\] {
-  font-size: 4rem;
-}
-
-.text-\[2rem\] {
-  font-size: 2rem;
+.text-\[0\.5rem\] {
+  font-size: 0.5rem;
 }
 
 .font-bold {
@@ -603,6 +606,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 800;
 }
 
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -611,11 +619,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .transition-colors {
@@ -633,4 +636,36 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-green-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:text-\[3rem\] {
+    font-size: 3rem;
+  }
+
+  .sm\:text-\[5rem\] {
+    font-size: 5rem;
+  }
+
+  .sm\:text-\[1rem\] {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-\[7rem\] {
+    font-size: 7rem;
+  }
+
+  .lg\:text-\[0\.5rem\] {
+    font-size: 0.5rem;
+  }
+
+  .lg\:text-\[1rem\] {
+    font-size: 1rem;
+  }
+
+  .lg\:text-\[2rem\] {
+    font-size: 2rem;
+  }
 }
