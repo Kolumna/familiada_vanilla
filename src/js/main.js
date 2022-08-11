@@ -15,9 +15,6 @@ const colorMaker = () => {
     }
 }
 
-
-document.querySelector('#strona').innerHTML = strona;
-
 class Odpowiedz {
     constructor(odp, pkt) {
         this._odp = odp;
@@ -25,11 +22,11 @@ class Odpowiedz {
     }
 
     get odp() {
-        return this._odp;
+        return this._odp.toUpperCase();
     }
 
     get pkt() {
-        return this._pkt;
+        return parseInt(this._pkt);
     }
 
 }
@@ -38,6 +35,8 @@ const getStart = () => {
     document.querySelector('#gra').style = 'display: flex;';
     document.querySelector('#form').style = 'display: none;';
     document.querySelector('#checkbox').style = 'display: none;';
+    document.querySelector('#gra_tytul').style = 'display: block;';
+    document.querySelector('#gra_tytul').innerHTML = document.querySelector('#tytul').value;
 
     if (document.querySelector('#nieb').checked === true) {
         console.log('nieb')
@@ -79,8 +78,10 @@ const getWynik = () => {
 
     if (zyciaL || zyciaP > 0) {
         for (let i in odpowiedzi) {
-            if (wynik === odpowiedzi[i].odp) {
+            if (wynik.toUpperCase() === odpowiedzi[i].odp) {
                 document.querySelector(`#w${i}`).style = '';
+                punkty += odpowiedzi[i].pkt;
+                console.log(`punkty ${punkty}`)
                 check = true;
                 wersy += 1;
                 if (wersy === 5 && strona === 0) {
@@ -96,7 +97,6 @@ const getWynik = () => {
         if (!check) {
             if (strona === 0) {
                 zyciaL -= 1;
-                document.querySelector('#strona').innerHTML = strona;
                 if (rewanz === 1) {
                     switch (zyciaL) {
                         case 2:
@@ -121,7 +121,6 @@ const getWynik = () => {
                 }
             } else {
                 zyciaP -= 1;
-                document.querySelector('#strona').innerHTML = strona;
                 if (rewanz === 0) {
                     switch (zyciaP) {
                         case 2:
@@ -147,10 +146,8 @@ const getWynik = () => {
                 }
             }
         }
-
-        console.log(`zyciaL ${zyciaL}`)
-        console.log(`zyciaP ${zyciaP}`)
-
         document.querySelector('#wynik').value = null;
+
+        document.querySelector('#punkty').innerHTML = parseInt(punkty);;
     }
 }   
