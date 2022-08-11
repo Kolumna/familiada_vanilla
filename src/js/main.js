@@ -68,7 +68,7 @@ const getOdpowiedzi = () => {
     }
 
     for (i in odpowiedzi) {
-        document.querySelector('#wyniki').innerHTML += `<div id=w${i} style="visibility: hidden;" class="flex justify-between items-center w-full text-[4rem] mb-12"><h1>${parseInt(i)+1}. ${odpowiedzi[i].odp}</h1><h1>${odpowiedzi[i].pkt}pkt</h1></div>`;
+        document.querySelector('#wyniki').innerHTML += `<div id=w${i} style="visibility: hidden; margin-bottom: 75px;" class="flex justify-between items-center w-full text-[4rem] mb-[50px]"><h1>${parseInt(i)+1}. ${odpowiedzi[i].odp}</h1><h1>${odpowiedzi[i].pkt}pkt</h1></div>`;
     }
 }
 
@@ -85,11 +85,11 @@ const getWynik = () => {
                 check = true;
                 wersy += 1;
                 if (wersy === 5 && strona === 0) {
-                    document.querySelector('#results').innerHTML = '<h1>Niebieski wygrał</h1>';
-                    document.querySelector('#gra').style = 'display: none;';
+                    document.querySelector('#results').innerHTML = '<h1>Niebiescy wygrali</h1>';
+                    document.querySelector('#wyniki').style = 'display: none';
                 } else if (wersy === 5 && strona === 1) {
-                    document.querySelector('#results').innerHTML = '<h1>Czerwony wygrał</h1>';
-                    document.querySelector('#gra').style = 'display: none;';
+                    document.querySelector('#results').innerHTML = '<h1>Czerwoni wygrali</h1>';
+                    document.querySelector('#wyniki').style = 'display: none';
                 }
             }
         }
@@ -116,7 +116,8 @@ const getWynik = () => {
                     if (zyciaL === 2) {
                         document.querySelector('#zycie0').innerHTML += '<span style="font-size: 8rem; font-weight: extrabold;">X</span>';
                         zyciaL = 0;
-                        document.querySelector('#results').innerHTML = '<h1>Niebieski przegrał</h1>'
+                        document.querySelector('#results').innerHTML = '<h1>Niebiescy wygrali</h1>';
+                        document.querySelector('#wyniki').style = 'display: none';
                     }
                 }
             } else {
@@ -141,7 +142,8 @@ const getWynik = () => {
                     if (zyciaP === 2) {
                         document.querySelector('#zycie1').innerHTML += '<span style="font-size: 8rem; font-weight: extrabold;">X</span>';
                         zyciaP = 0;
-                        document.querySelector('#results').innerHTML = '<h1>Czerwony przegrał</h1>'
+                        document.querySelector('#results').innerHTML = '<h1>Czerwoni wygrali</h1>';
+                        document.querySelector('#wyniki').style = 'display: none';
                     }
                 }
             }

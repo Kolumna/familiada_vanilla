@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-  <div id="form" class="flex w-screen items-center justify-center flex-col">
+  <div id="form" class="flex w-full h-screen items-center justify-center flex-col">
     <h1 class=" text-gray-800 text-[3rem] sm:text-[5rem] lg:text-[7rem] font-bold ">Weseliada<span class="text-[0.5rem] sm:text-[1rem] lg:text-[2rem]">by Janiec</span></h1>
     <input id="tytul" class="border-4 mt-2 border-black rounded-lg" type="text" placeholder="Tytuł" required />
     <div>
@@ -39,12 +39,13 @@
         <div id="zycie0" class="w-[10%] flex flex-col justify-center items-center"> 
         </div>
         <div class=" w-full h-full flex justify-between flex-col items-center">
-          <h1 class="mt-4 text-3xl text-white text-bold" id="gra_tytul" style="display: none;"></h1>
+          <h1 class="mt-4 text-[5xl] text-white text-bold" id="gra_tytul" style="display: none;"></h1>
           <div id="wyniki" class="flex flex-col justify-evenly items-start font-extrabold text-3xl w-full">
             <div class="flex justify-between font-bold text-2xl w-full mb-8">
               <h1>NAZWA</h1><h1>PUNKTY</h1>
             </div>
           </div>
+          <h1 class="text-[4rem] font-bold text-white" id="results"></h1>
           <div class=" text-3xl font-bold">
             <h1 id="punkty">PUNKTY: 0</h1>
           </div>
@@ -58,14 +59,17 @@
     </div>
     <button class="bg-green-400 mt-2 p-4 rounded-lg border-4 font-bold hover:bg-green-300" onclick="getWynik();">Wyślij</button>
   </div>
-  <div id="checkbox" class=" flex justify-center w-screen items-center flex-col" style=" display: none;">
+  <div id="checkbox" class=" flex justify-center items-center h-screen w-full items-center flex-col" style=" display: none;">
     <div class=" mt-8">
-      <span>Niebiescy <input class="border-4 mt-2 border-black rounded-lg" id="nieb" class="" placeholder="Wpisz odpowiedź" type='checkbox' /></span>
-      <span>Czerwoni <input class="border-4 mt-2 border-black rounded-lg" id="czer" class="" placeholder="Wpisz odpowiedź" type='checkbox' /></span>
+      <div class="">
+        <span class="text-[5rem] font-bold text-blue-500">Niebiescy <input class="border-4 mt-2 border-black rounded-lg w-[50px] h-[50px]" id="nieb" type='checkbox' /></span>
+      </div>
+      <div class="">
+        <span class="text-[5rem] font-bold text-red-500">Czerwoni <input class="border-4 mt-2 border-black rounded-lg w-[50px] h-[50px]" id="czer" type='checkbox' /></span>
+      </div>
     </div>
-    <button class="bg-green-400 mt-2 p-4 rounded-lg border-4 font-bold hover:bg-green-300" onclick="getStart();">Wyślij</button>
+    <button class="bg-green-400 mt-8 p-4 rounded-lg border-4 font-bold hover:bg-green-300" onclick="getStart();">Wyślij</button>
   </div>
-  <p class="text-xl font-bold text-red-500" id="results"></p>
   <script src="./src/js/main.js"></script>
 </body>
 
