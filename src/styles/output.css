@@ -488,6 +488,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .h-\[85vh\] {
   height: 85vh;
 }
@@ -496,20 +500,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
 .h-\[50px\] {
   height: 50px;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.w-screen {
-  width: 100vw;
+.w-full {
+  width: 100%;
 }
 
 .w-16 {
@@ -522,14 +518,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[10\%\] {
   width: 10%;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .w-\[50px\] {
@@ -587,12 +575,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.text-\[7rem\] {
-  font-size: 7rem;
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
-.text-\[2rem\] {
-  font-size: 2rem;
+.text-\[0\.5rem\] {
+  font-size: 0.5rem;
 }
 
 .text-3xl {
@@ -605,25 +593,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-\[3rem\] {
-  font-size: 3rem;
-}
-
-.text-\[0\.5rem\] {
-  font-size: 0.5rem;
+.text-\[4rem\] {
+  font-size: 4rem;
 }
 
 .text-\[5rem\] {
   font-size: 5rem;
-}
-
-.text-\[4rem\] {
-  font-size: 4rem;
 }
 
 .font-bold {
@@ -644,14 +619,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .transition-colors {
@@ -672,10 +647,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:text-\[3rem\] {
-    font-size: 3rem;
-  }
-
   .sm\:text-\[5rem\] {
     font-size: 5rem;
   }
@@ -688,14 +659,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 1024px) {
   .lg\:text-\[7rem\] {
     font-size: 7rem;
-  }
-
-  .lg\:text-\[0\.5rem\] {
-    font-size: 0.5rem;
-  }
-
-  .lg\:text-\[1rem\] {
-    font-size: 1rem;
   }
 
   .lg\:text-\[2rem\] {

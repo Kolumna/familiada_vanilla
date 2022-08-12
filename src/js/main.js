@@ -68,7 +68,7 @@ const getOdpowiedzi = () => {
     }
 
     for (i in odpowiedzi) {
-        document.querySelector('#wyniki').innerHTML += `<div id=w${i} style="visibility: hidden; margin-bottom: 75px;" class="flex justify-between items-center w-full text-[4rem] mb-[50px]"><h1>${parseInt(i)+1}. ${odpowiedzi[i].odp}</h1><h1>${odpowiedzi[i].pkt}pkt</h1></div>`;
+        document.querySelector('#wyniki').innerHTML += `<div id=w${i} style="visibility: hidden; margin-bottom: 75px;" class="flex justify-between items-center w-full text-[3rem] mb-[50px]"><h1>${parseInt(i)+1}. ${odpowiedzi[i].odp}</h1><h1>${odpowiedzi[i].pkt}pkt</h1></div>`;
     }
 }
 
