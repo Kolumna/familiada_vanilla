@@ -116,7 +116,9 @@ const getWynik = () => {
                     if (zyciaL === 2) {
                         document.querySelector('#zycie0').innerHTML += '<span style="font-size: 8rem; font-weight: extrabold;">X</span>';
                         zyciaL = 0;
-                        document.querySelector('#results').innerHTML = '<h1>Niebiescy wygrali</h1>';
+                        document.querySelector('#results').innerHTML = '<h1>Czerwoni wygrali</h1>';
+                        strona = 1;
+                        colorMaker();
                         document.querySelector('#wyniki').style = 'display: none';
                     }
                 }
@@ -142,7 +144,9 @@ const getWynik = () => {
                     if (zyciaP === 2) {
                         document.querySelector('#zycie1').innerHTML += '<span style="font-size: 8rem; font-weight: extrabold;">X</span>';
                         zyciaP = 0;
-                        document.querySelector('#results').innerHTML = '<h1>Czerwoni wygrali</h1>';
+                        document.querySelector('#results').innerHTML = '<h1>Niebiescy wygrali</h1>';
+                        strona = 0;
+                        colorMaker();
                         document.querySelector('#wyniki').style = 'display: none';
                     }
                 }
